@@ -23,9 +23,9 @@ const App = () => {
     setInputData("");
     saveTodoLocal()
   }
-  const saveTodoLocal = useCallback(()=>{
+  const saveTodoLocal = ()=>{
     localStorage.setItem('todo', JSON.stringify(todo));
-  },[todo, inputData, onHandleClick]);
+  }
 
   const handleCheckBox= (e)=>{
     let id = e.target.name
